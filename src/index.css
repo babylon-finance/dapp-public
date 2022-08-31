@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'cera-black';
+  src: url('fonts/cera-black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cera-bold';
+  src: url('fonts/cera-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cera-medium';
+  src: url('fonts/cera-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cera-regular';
+  src: url('fonts/cera-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cera-thin';
+  src: url('fonts/cera-thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cera-light';
+  src: url('fonts/cera-light.woff') format('woff');
+}
+
+:root {
+  /* colors */
+  --primary: #160e6b;
+  --blue: #0f0a45;
+  --blue-alt: #181350;
+  --blue-01: #221a72;
+  --blue-02: #282076;
+  --blue-03: #afacc9;
+  --blue-04: #d9d8e1;
+  --blue-05: #6c679d;
+  --blue-06: #38336d;
+  --blue-07: #231d65;
+  --blue-08: #2271cb;
+  --blue-09: #160e6b;
+  --blue-perf: #2271cb;
+  --borders: #8676e8;
+  --footer-blue: #110b50;
+  --odd-table-row: rgb(15, 10, 69, 0.7);
+  --even-table-row: rgb(15, 10, 69, 0.1);
+  --border-blue: rgb(108, 103, 157, 0.5);
+  --modal-blue: #181350;
+  --purple: #4420d8;
+  --purple-aux: #917dff;
+  --purple-01: #3a1abc;
+  --purple-02: #937dff;
+  --purple-03: #5849b7;
+  --purple-04: #6151c4;
+  --purple-05: #7356ff;
+  --purple-06: #a897ff;
+  --purple-07: #3317a5;
+  --purple-08: #8676e8;
+  --purple-09: #da90f0;
+  --purple-10: #2d1786;
+  --turquoise-01: #00c7ba;
+  --turquoise-02: #49d4ca;
+  --turquoise-03: #75e0d7;
+  --turquoise-04: #8df3eb;
+  --yellow: #ffbe44;
+  --pink: #ff2972;
+  --pink-01: #ff87b0;
+  --primary-gray: #d0cfe1;
+  --light-gray: #f2f2f2;
+  --white: #fff;
+  --black: #000;
+  --positive: #8bcf51;
+  --negative: #ff2972;
+  --high-risk: #ed7824;
+  --red: #ff3f25;
+  --green: #7ac936;
+  --green-02: #c6e30b;
+
+  --purple-02-alpha: rgba(147, 125, 255, 0.1);
+  --blue-03-alpha: rgba(175, 172, 201, 0.25);
+  /* fonts */
+  --font-size-base: 16px;
+  --font-size-h1: 3.375em;
+  --line-height-base: 1.42;
+
+  /* responsive */
+  --screen-xs: 576px;
+  --screen-sm-min: 768px;
+  --screen-sm-max: 992px;
+  --screen-md-max: 1280px;
+  --screen-lg-min: 1440px;
+}
+
+html,
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: cera-regular;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+#root {
+  /* overflow-x: hidden; */
+}
+
+a {
+  text-decoration: none;
+}
+
+aside.bn-onboard-custom {
+  z-index: 99999999999;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  color: var(--white);
+  font-size: var(--font-size-h1);
+  font-family: cera-bold;
+}
+
+h2 {
+  color: var(--white);
+  font-family: cera-light;
+}
+
+h3 {
+  color: var(--white);
+  font-family: cera-bold;
+}
+
+h4 {
+  color: var(--white);
+  font-family: cera-bold;
+}
+
+p,
+span {
+  font-family: cera-regular;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.react-tooltip-lite-arrow {
+  margin-top: -1px !important;
+}

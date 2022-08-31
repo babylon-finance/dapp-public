@@ -1,0 +1,12 @@
+{
+  "name": "common",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "defender-autotask-client": "^1.7.0",
+    "defender-kvstore-client": "^1.10.0",
+    "defender-relay-client": "^1.8.0",
+    "node-telegram-bot-api": "^0.54.0"
+  }
+}

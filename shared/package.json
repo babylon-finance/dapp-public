@@ -1,0 +1,9 @@
+{
+  "name": "shared",
+  "version": "0.1.1",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "faunadb": "^4.1.1"
+  }
+}

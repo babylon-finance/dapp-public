@@ -1,0 +1,47 @@
+[build]
+  functions = "build/functions"
+  command = "yarn build"
+  publish = "build/"
+
+[dev]
+  functions = 'lambda'
+  framework = "#custom"
+  command = "yarn start" # Command to start your dev server
+  targetPort = 3000 # The port for your application server, framework or site generator
+  port = 8888 # The port that the netlify dev will be accessible on
+  publish = "dist" # The path to your static content folder
+  # jwtSecret = "secret" # The secret used to verify tokens for JWT based redirects
+  # jwtRolePath = "app_metadata.authorization.roles" # Object path we should look for role values for JWT based redirects
+  # autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
+
+[[redirects]]
+  from = "/api/v1/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/*"
+  to = "/geoblocked.html"
+  status = 403
+  force = true
+  conditions = {Country = ["BY", "MMR", "CU", "CD", "IR", "IQ", "KR", "SD", "SY", "VE", "ZW", "LR", "CIV"]}
+
+
+[[plugins]]
+  package = 'netlify-plugin-contextual-env'
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-XSS-Protection = "1; report=https://o577344.ingest.sentry.io/api/5732012/security/?sentry_key=dc74338b7a2a45f282939675e833dcb6"
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy-Report-Only = "default-src 'self' https://www.babylon.finance/ ; style-src 'self' 'unsafe-inline' https://www.babylon.finance/; frame-ancestors 'self'; script-src 'self' 'unsafe-eval' 'sha256-OUB+gngDMTWV3OyY7rYmlLd4JgqS4pjKYuTyYOZFtfI=' 'sha256-+imIszO+GWDiuGCJRfrGFI9MjS6vt7OvtMGj6XtSOlM=' 'sha256-gMjVdf3YRTJQbr24RpvU1wLFCX/MuS3JpwCapxfpgRk=' https://www.babylon.finance/ ; connect-src 'self' https://*.babylon.finance/ https://ethgasstation.info/ https://cold-aged-darkness.quiknode.pro https://eth-mainnet.alchemyapi.io wss://api.blocknative.com wss://*.bridge.walletconnect.org/ https://api-js.mixpanel.com https://api.blocknative.com https://media.graphcms.com/ https://*.ingest.sentry.io/ https://babylon.mypinata.cloud/ https://raw.githubusercontent.com/uniswap/ ipapi.co; img-src 'self' blob: data: https://www.babylon.finance/ babylon.finance https://s2.coinmarketcap.com/ https://api.thegraph.com/ https://www.gstatic.com/ https://tokens.1inch.exchange/ https://tokens.1inch.io/ https://babylon.mypinata.cloud/ https://raw.githubusercontent.com/uniswap/ https://media.graphcms.com/ https://assets.coingecko.com/coins/images/ https://d1xs6qapz6teax.cloudfront.net/; base-uri 'self'; report-uri https://o577344.ingest.sentry.io/api/5732012/security/?sentry_key=dc74338b7a2a45f282939675e833dcb6;"
+

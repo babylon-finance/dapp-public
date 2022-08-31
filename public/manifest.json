@@ -1,0 +1,11 @@
+{
+  "name": "Babylon.finance",
+  "description": "Community-led asset management",
+  "icons": [
+    {
+      "src": "android-chrome-256x256.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

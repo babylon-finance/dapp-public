@@ -1,0 +1,1 @@
+export { getLockPeriodLabel } from './getLockPeriodLabel';

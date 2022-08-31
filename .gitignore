@@ -1,0 +1,64 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/jspm_packages
+node_modules
+.pnp
+.pnp.js
+
+# production
+/build
+dist
+
+# misc
+.DS_Store
+.env
+.env.development
+.env.production
+.env.*.local
+.env.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+
+# TypeScript v1 declaration files
+/typings
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+.vscode/
+
+# Local Netlify folder
+.netlify
+
+src/typechain
+src/contracts
+src/contracts.json
+src/31337.json
+lambda/contracts
+
+lambda/contracts.json
+lambda/shared/31337.json
+lambda/shared/version.json
+lambda/shared/contracts.json
+lambda/contracts
+
+autotasks/keeper/contracts.json
+
+# Pre-build directory for lambdas
+/.functions
+/.prepared-functions
+
+webpackstats.json

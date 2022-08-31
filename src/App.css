@@ -1,0 +1,54 @@
+@import './antd.css';
+
+html,
+body {
+  font-family: cera-regular, Arial, Helvetica, sans-serif;
+  color: var(--white);
+  width: 100%;
+  position: relative;
+}
+
+body {
+  background: var(--primary);
+}
+
+.bn-onboard-custom.bn-onboard-dark-mode {
+  background: var(--primary) !important;
+  font-family: cera-regular;
+}
+
+.bn-notify-custom.bn-notify-dark-mode {
+  font-family: cera-regular;
+  background-color: var(--purple) !important;
+}
+
+.bn-onboard-custom.bn-onboard-selected-wallet {
+  background-color: var(--purple) !important;
+}
+
+.bn-onboard-icon-button:hover {
+  background-color: var(--purple-aux) !important;
+}
+
+.react-tooltip-lite {
+  background: var(--blue-05);
+  border-radius: 4px;
+  color: var(--white);
+  font-family: cera-regular;
+  font-size: 16px;
+  line-height: 120%;
+  padding: 10px 12px;
+  text-align: left;
+  width: 300px;
+}
+
+.react-tooltip-lite-arrow {
+  border-color: var(--blue-05);
+}
+
+.admin-tooltip span {
+  width: auto;
+}
+
+.verified-carousel-dots {
+}
